@@ -7,7 +7,7 @@ import Card from './components/Card'
 import './App.css'
 
 {
-	/* <Hero /> */
+	/* <Hero />, potem dodac hero do App */
 }
 
 function App() {
