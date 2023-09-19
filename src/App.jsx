@@ -5,13 +5,38 @@ import Hero from './components/Hero'
 import Nav from './components/Nav'
 import Card from './components/Card'
 import Cats from './components/Contact'
+import Data from './components/Data'
 import './App.css'
 
 {
 	/* <Hero />, potem dodac hero do App */
 }
 
+/*
+Challenge:
+
+- import the array of data from data.js
+- map over the array to create <Card /> components
+- display the array of card components under the navbar
+  (in place of the current <Card /> component)
+
+Note: We haven't styled the group of components yet, so they'll
+still be block elements, stacked vertically. We'll add styling later.
+*/
+
 function App() {
+	const dataElements = Data.map(data => {
+		return (
+			<Card
+				id="1"
+				title="Life Lessons with Katie Zaferes"
+				price={136}
+				coverImg="./images/katie-zaferes.png"
+				stats={[(rating = 5.0), (reviewCount = 6)]}
+			/>
+		)
+	})
+
 	return (
 		<>
 			<Nav />
@@ -27,27 +52,5 @@ function App() {
 		</>
 	)
 }
-
-// const nums = [1, 2, 3, 4, 5]
-
-// const number1 = nums.map(x => x ** 2)
-
-// console.log(number1)
-
-// const names = ['alice', 'bob', 'charlie', 'danielle']
-
-// const firstLetter = names.map(name => {
-// 	return name[0].toUpperCase() + name.slice(1)
-// })
-
-// console.log(firstLetter)
-
-// const pokemon = ['Bulbosaur', 'Charmander', 'Squirtle']
-
-// const pokemonWithPTags = pokemon.map(name => {
-// 	return `<p>${name}</p>`
-// })
-
-// console.log(pokemonWithPTags)
 
 export default App
