@@ -25,14 +25,15 @@ still be block elements, stacked vertically. We'll add styling later.
 */
 
 function App() {
-	const dataElements = Data.map(data => {
+	const dataElements = Data.map(item => {
 		return (
 			<Card
-				id="1"
-				title="Life Lessons with Katie Zaferes"
-				price={136}
-				coverImg="./images/katie-zaferes.png"
-				stats={[(rating = 5.0), (reviewCount = 6)]}
+				img={item.coverImg}
+				rating={item.stats}
+				reviewCount={item.stats}
+				location={item.location}
+				title={item.title}
+				price={item.price}
 			/>
 		)
 	})
