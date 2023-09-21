@@ -25,9 +25,10 @@ still be block elements, stacked vertically. We'll add styling later.
 */
 
 function App() {
-	const dataElements = Data.map(item => {
+	const cards = Data.map(item => {
 		return (
 			<Card
+				key={item.title}
 				img={item.coverImg}
 				rating={item.stats.rating}
 				reviewCount={item.stats.reviewCount}
@@ -41,7 +42,7 @@ function App() {
 	return (
 		<>
 			<Nav />
-			{dataElements}
+			{cards}
 		</>
 	)
 }
