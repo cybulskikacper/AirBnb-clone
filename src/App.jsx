@@ -8,49 +8,16 @@ import Cats from './components/Contact'
 import Data from './components/Data'
 import './App.css'
 
-{
-	/* <Hero />, potem dodac hero do App */
-}
-
-/*
-Challenge:
-
-- import the array of data from data.js
-- map over the array to create <Card /> components
-- display the array of card components under the navbar
-  (in place of the current <Card /> component)
-
-Note: We haven't styled the group of components yet, so they'll
-still be block elements, stacked vertically. We'll add styling later.
-*/
-
 function App() {
 	const cards = Data.map(item => {
-		return (
-			<Card
-				key={item.id}
-				img={item.coverImg}
-				rating={item.stats.rating}
-				reviewCount={item.stats.reviewCount}
-				location={item.location}
-				title={item.title}
-				price={item.price}
-				openSpots={item.openSpots}
-			/>
-		)
+		return <Card key={item.id} item={item} />
 	})
 
 	return (
 		<>
 			<Nav />
-
-			<section className="cards-list">
-				
-				
-				{cards}
-							
-			
-			</section>
+			<Hero />
+			<section className="cards-list">{cards}</section>
 		</>
 	)
 }

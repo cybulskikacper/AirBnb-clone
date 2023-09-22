@@ -19,14 +19,4 @@ function Cats(props) {
 	)
 }
 
-// const person = {
-// 	img: './images/mr-whiskerson.png',
-// 	name: 'Mr. Whiskerson',
-// 	phone: '(212) 555-1234',
-// 	mail: 'mr.whiskaz@catnap.meow',
-// }
-
-// const { img, name } = person
-// console.log(person)
-
 export default Cats
