@@ -28,13 +28,14 @@ function App() {
 	const cards = Data.map(item => {
 		return (
 			<Card
-				key={item.title}
+				key={item.id}
 				img={item.coverImg}
 				rating={item.stats.rating}
 				reviewCount={item.stats.reviewCount}
 				location={item.location}
 				title={item.title}
 				price={item.price}
+				openSpots={item.openSpots}
 			/>
 		)
 	})
@@ -42,7 +43,14 @@ function App() {
 	return (
 		<>
 			<Nav />
-			{cards}
+
+			<section className="cards-list">
+				
+				
+				{cards}
+							
+			
+			</section>
 		</>
 	)
 }
