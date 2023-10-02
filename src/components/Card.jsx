@@ -11,7 +11,7 @@ function Card(props) {
 	return (
 		<div className="card">
 			{badgeText === 0 && <div className="card--badge">{badgeText}</div>}
-			<img src={props.item.coverImg} alt="Picture of american athlete Katie Zaferes" className="card--image" />
+			<img src={props.item.coverImg} className="card--image" />
 
 			<div className="card--stats">
 				<img src="./images/star.png" className="card--star" />
